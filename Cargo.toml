@@ -5,12 +5,12 @@ edition = "2024"
 
 [dependencies]
 bootloader = "0.9"
-cc = "*"
 [dev-dependencies]
 bootimage = "0.10.0"
 
 [build-dependencies]
 bootimage = "0.10.0"
+cc = "1.0"
 
 [profile.dev]
 panic = "abort"
