@@ -30,7 +30,7 @@ To build and run Renux OS, you need to have the following tools installed:
 1. **Clone the Repository**:
 
     ```sh
-    git clone https://github.com/Renan2010/renuxos/renuxos.git
+    git https://github.com/Renan2010/renuxos.git
     cd renuxos
     ```
 
