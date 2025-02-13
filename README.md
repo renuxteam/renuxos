@@ -24,7 +24,7 @@ To build and run Renux OS, you need to have the following tools installed:
 - `cargo bootimage`: Install it using `cargo install bootimage --version "^0.10.0"`.
 - [QEMU](https://www.qemu.org/): Optional, for emulating the OS.
 
-### Installation
+### Build this OS
 
 1. **Clone the Repository**:
 
@@ -46,13 +46,17 @@ To build and run Renux OS, you need to have the following tools installed:
     cargo install bootimage --version "^0.10.0"
     ```
 
-4. **Build the Bootable Image**:
+4. **Build the Bootable Image**
 
+    Easy mode build
     ```sh
-    cargo bootimage --target x86_64-unknown-none
+    python build.py
     ```
-
-5. **Run with QEMU** (optional):
+    Hard mode build
+    ```sh
+    cargo build --target x86_64-unknown-none -j cores # number of  CPU cores
+    ```
+6. **Run with QEMU** (optional):
 
     ```sh
     qemu-system-x86_64 -drive format=raw,file=target/x86_64/debug/bootimage-renux_os.bin
