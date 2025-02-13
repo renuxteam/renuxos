@@ -1,0 +1,19 @@
+[package]
+name = "renuxos11"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bootloader = "0.9"
+cc = "*"
+[dev-dependencies]
+bootimage = "0.10.0"
+
+[build-dependencies]
+bootimage = "0.10.0"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
