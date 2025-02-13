@@ -1,12 +1,11 @@
 # Renux OS
 
-Renux OS is a minimal operating system written in Rust. This project aims to provide a basic kernel that can be extended with additional features as needed. The primary focus is on learning and exploring the development of an OS in Rust.
+Renux OS is a complete Unix-like operating system written in Rust. This project aims to provide a hybrid kernel that can be extended with additional features as needed. The main focus is to learn and explore developing an operating system in Rust.
 
 ## Features [In planning]
 
 - **Written in Rust**: Leveraging the safety and concurrency features of Rust.
 - **Hybrid Kernel**: Combines elements of both monolithic and microkernel designs.
-- **Minimal Kernel**: A simple and clean starting point for further development.
 - **Bootable Image**: Create a bootable image using `cargo bootimage`.
 - **QEMU Support**: Test your OS in a virtual environment using QEMU.
 
