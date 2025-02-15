@@ -1,4 +1,4 @@
-name: Build Renux OS
+name: Rust CI
 
 on:
   push:
@@ -20,6 +20,8 @@ jobs:
       uses: actions-rs/toolchain@v1
       with:
         toolchain: nightly
+        components: rust-src
+        profile: minimal
 
-    - name: Build Renux OS
-      run: cargo build --target x86_64-unknown-none -j $(nproc)
+    - name: Build
+      run: cargo +nightly build --target x86_64-unknown-none -j $(nproc)
