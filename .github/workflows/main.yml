@@ -23,6 +23,9 @@ jobs:
         components: rust-src
         profile: minimal
 
+    - name: Set nightly as default
+      run: rustup default nightly
+
     - name: Add target
       run: rustup target add x86_64-unknown-none
 
