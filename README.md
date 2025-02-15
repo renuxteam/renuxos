@@ -61,5 +61,5 @@ To build and run Renux OS, you need to have the following tools installed:
 6. **Run with QEMU** (optional):
 
     ```sh
-    qemu-system-x86_64 -drive format=raw,file=target/x86_64/debug/bootimage-renux_os.bin
+    qemu-system-x86_64 -drive format=raw,file=target/x86_64/debug/bootimage-renuxos.bin
     `
