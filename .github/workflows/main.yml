@@ -22,6 +22,9 @@ jobs:
         toolchain: nightly
         components: rust-src
         profile: minimal
-
+        
+    - name: Run rustup target add x86_64-unknown-none command
+      run: rustup target add x86_64-unknown-none
+      
     - name: Build
       run: cargo +nightly build --target x86_64-unknown-none -j $(nproc)
