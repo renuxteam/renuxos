@@ -20,7 +20,7 @@ def get_cpu_cores():
 
 def build_project(cores):
     # Compile the project using all available CPU cores and specify the target architecture
-    subprocess.run(["cargo", "build", "--target", "x86_64-unknown-none", f"-j{cores}"])
+    subprocess.run(["cargo", "bootimage", "--target", "x86_64-unknown-none", f"-j{cores}"])
 
 def main():
     try:
