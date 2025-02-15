@@ -56,7 +56,7 @@ To build and run Renux OS, you need to have the following tools installed:
     ```
     Hard mode build
     ```sh
-    cargo build --target x86_64-unknown-none -j cores # number of  CPU cores
+    cargo bootimage --target x86_64-unknown-none -j cores # number of  CPU cores
     ```
 6. **Run with QEMU** (optional):
 
