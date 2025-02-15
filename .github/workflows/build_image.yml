@@ -28,6 +28,8 @@ jobs:
 
     - name: Add target
       run: rustup target add x86_64-unknown-none
+    - name: add llvm-tools-preview
+      run: rustup component add llvm-tools-preview
 
     - name: Install bootimage in version (0.10.0) 
       run: cargo install bootimage --version "^0.10.0" -j $(nproc)
