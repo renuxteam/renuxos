@@ -7,11 +7,10 @@ extern "C" {
 
 void init_vga_driver();
 
-
-
+#ifdef __cplusplus
 }
-#ifndef __cplusplus
+#ifdef __cplusplus
 
 #endif
-
+#endif
 #endif // VGA_H
