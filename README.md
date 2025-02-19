@@ -11,7 +11,7 @@ Renux OS is a complete Unix-like operating system written in Rust. This project 
 
 - [X] **Written in Rust**: Leveraging the safety and concurrency features of Rust.
 - [ ] **Hybrid Kernel**: Combines elements of both monolithic and microkernel designs.
-- [X] **Python script**: Build Renux easily
+- [X] **Scripts directory**: Create and manage Renux easily
 - [ ] **C and C++ languages**: Add tools and drivers in C and C++ to communicate directly on hardware
 - [X] **Bootable Image**: Create a bootable image using `cargo bootimage`.
 - [X] **QEMU Support**: Test your OS in a virtual environment using QEMU.
