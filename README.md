@@ -45,6 +45,7 @@ To build and run Renux OS, you need to have the following tools installed:
     ```sh
     rustup install nightly
     rustup component add rust-src --toolchain nightly
+    rustup component add llvm-tools-preview
     ```
 
 3. **Install `bootimage`**:
