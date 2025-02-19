@@ -1,3 +1,0 @@
-[submodule "gnu/coreutils"]
-	path = gnu/coreutils
-	url = https://github.com/coreutils/coreutils.git
