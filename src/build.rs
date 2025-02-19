@@ -5,6 +5,6 @@ use std::process::Command;
 fn main() {
     // Compile VGA driver
     cc::Build::new()
-        .file("c_src/drivers/gpu/vga/vga.c")
+        .file("drivers/c/gpu/vga/vga.c")
         .compile("vga");
 }
