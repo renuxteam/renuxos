@@ -57,7 +57,7 @@ To build and run Renux OS, you need to have the following tools installed:
 
     Easy mode build
     ```sh
-    python build.py
+    python scripts/build.py
     ```
     Hard mode build
     ```sh
