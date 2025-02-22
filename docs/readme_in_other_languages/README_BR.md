@@ -1,69 +1,30 @@
+## 🌍 Selecionar Idioma | Seleccionar Idioma
+
+| 🌐 Language | 📄 README |
+|------------|----------|
+| Portugues | [README_BR.md](./docs/readme_in_other_languages/README_BR.md) |
+| Español | [README_es.md](./docs/readme_in_other_languages/README_ES.md) |
+#
 <p align="center">
   <img src="https://github.com/user-attachments/assets/99a8117c-bd7e-4633-b6bb-3f6ce2c29bcb" alt="Renux Logo">
 </p>
 
 #
 
-Renux OS é um sistema operacional completo do tipo Unix escrito em Rust. Este projeto visa fornecer um kernel híbrido que pode ser estendido com recursos adicionais conforme necessário. O principal foco é aprender e explorar o desenvolvimento de um sistema operacional em Rust.
+Renux OS é um sistema operacional completo semelhante ao Unix escrito em Rust. Este projeto visa fornecer um kernel híbrido que pode ser estendido com recursos adicionais conforme necessário. O foco principal é aprender e [...]
 
-## Funcionalidades [Em planejamento]
+## Recursos [Em planejamento]
 
 - [X] **Escrito em Rust**: Aproveitando os recursos de segurança e concorrência do Rust.
-- [ ] **Kernel Híbrido**: Combina elementos de designs monolíticos e de microkernel.
-- [X] **Script Python**: Construa o Renux facilmente
-- [ ] **Linguagens C e C++**: Adicione ferramentas e drivers em C e C++ para se comunicar diretamente com o hardware
-- [X] **Imagem Bootável**: Crie uma imagem bootável usando `cargo bootimage`.
-- [X] **Suporte QEMU**: Teste seu sistema operacional em um ambiente virtual usando QEMU.
+- [ ] **Kernel Híbrido**: Combina elementos dos designs de kernel monolítico e de microkernel.
+- [X] **Diretório de Scripts**: Crie e gerencie o Renux facilmente.
+- [ ] **Linguagens C e C++**: Adicione ferramentas e drivers em C e C++ para se comunicar diretamente com o hardware.
+- [X] **Imagem de Boot**: Crie uma imagem de boot usando `cargo bootimage`.
+- [X] **Suporte para QEMU**: Teste seu sistema operacional em um ambiente virtual usando o QEMU.
 
 ## Status de Desenvolvimento
-> [!WARNING]
-> Renux OS está atualmente em fase de desenvolvimento. Muitos recursos ainda estão sendo implementados e testados. Contribuições e feedback são bem-vindos para ajudar a melhorar e expandir o projeto.
+> [!AVISO]
+> O Renux OS está atualmente na fase de desenvolvimento. Muitos recursos ainda estão sendo implementados e testados. Contribuições e feedback são bem-vindos para ajudar a melhorar e expandir o projeto.
 
-## Primeiros Passos
-
-### Pré-requisitos
-
-Para construir e executar o Renux OS, você precisa ter as seguintes ferramentas instaladas:
-
-- [Rust](https://www.rust-lang.org/): Instale Rust usando `rustup`.
-- `cargo bootimage`: Instale usando `cargo install bootimage --version "^0.10.0"`.
-- [QEMU](https://www.qemu.org/): Opcional, para emular o sistema operacional.
-
-### Construa este SO
-
-1. **Clone o Repositório**:
-
-    ```sh
-    git https://github.com/Renan2010/renuxos.git
-    cd renuxos
-    ```
-
-2. **Instale Rust Nightly e Componentes**:
-
-    ```sh
-    rustup install nightly
-    rustup component add rust-src --toolchain nightly
-    ```
-
-3. **Instale `bootimage`**:
-
-    ```sh
-    cargo install bootimage --version "^0.10.0"
-    ```
-
-4. **Construa a Imagem Bootável**
-
-    Modo fácil
-    ```sh
-    python build.py
-    ```
-    Modo difícil
-    ```sh
-    cargo bootimage --target x86_64-unknown-none -j cores # número de núcleos da CPU
-    ```
-
-6. **Execute com QEMU** (opcional):
-
-    ```sh
-    qemu-system-x86_64 -drive format=raw,file=target/x86_64-unknown-none/debug/bootimage-renuxos.bin
-    ```
+## Construa este OS e documentação
+Para instruções detalhadas sobre como construir o sistema operacional, incluindo a documentação, visite o diretório [docs](./docs/docs.md).
