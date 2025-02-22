@@ -1,3 +1,9 @@
+## 🌍 Selecionar Idioma | Seleccionar Idioma
+
+| 🌐 Language | 📄 README |
+|------------|----------|
+| Portugues | [README_BR.md](./docs/readme_in_other_languages/README_BR.md) |
+| Español | [README_es.md](./docs/readme_in_other_languages/README_ES.md) |
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/99a8117c-bd7e-4633-b6bb-3f6ce2c29bcb" alt="Renux Logo">
