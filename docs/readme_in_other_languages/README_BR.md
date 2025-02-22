@@ -11,7 +11,7 @@
 
 #
 
-Renux OS é um sistema operacional completo semelhante ao Unix escrito em Rust. Este projeto visa fornecer um kernel híbrido que pode ser estendido com recursos adicionais conforme necessário. O foco principal é aprender e [...]
+Renux OS é um sistema operacional completo semelhante ao Unix escrito em Rust. Este projeto visa fornecer um kernel híbrido que pode ser estendido com recursos adicionais conforme necessário.
 
 ## Recursos [Em planejamento]
 
@@ -23,8 +23,8 @@ Renux OS é um sistema operacional completo semelhante ao Unix escrito em Rust. 
 - [X] **Suporte para QEMU**: Teste seu sistema operacional em um ambiente virtual usando o QEMU.
 
 ## Status de Desenvolvimento
-> [!AVISO]
+> [!WARNING]
 > O Renux OS está atualmente na fase de desenvolvimento. Muitos recursos ainda estão sendo implementados e testados. Contribuições e feedback são bem-vindos para ajudar a melhorar e expandir o projeto.
 
-## Construa este OS e documentação
+## Construa este SO e a documentação
 Para instruções detalhadas sobre como construir o sistema operacional, incluindo a documentação, visite o diretório [docs](./docs/docs.md).
