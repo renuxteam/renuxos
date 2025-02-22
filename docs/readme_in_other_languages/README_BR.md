@@ -19,7 +19,7 @@ Renux OS é um sistema operacional completo semelhante ao Unix escrito em Rust. 
 - [ ] **Kernel Híbrido**: Combina elementos dos designs de kernel monolítico e de microkernel.
 - [X] **Diretório de Scripts**: Crie e gerencie o Renux facilmente.
 - [ ] **Linguagens C e C++**: Adicione ferramentas e drivers em C e C++ para se comunicar diretamente com o hardware.
-- [X] **Imagem de Boot**: Crie uma imagem de boot usando `cargo bootimage`.
+- [X] **Imagem de Boot**: Crie uma imagem de boot usando `grub-makerescue`.
 - [X] **Suporte para QEMU**: Teste seu sistema operacional em um ambiente virtual usando o QEMU.
 
 ## Status de Desenvolvimento
