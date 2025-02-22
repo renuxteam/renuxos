@@ -1,0 +1,3 @@
+# .cargo/config.toml
+[unstable]
+build-std = ["core", "compiler_builtins"]
