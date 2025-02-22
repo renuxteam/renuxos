@@ -17,6 +17,6 @@
     "ld.lld": ["-o", "renuxos-kernel.elf"]
   },
   "post-link-args": {
-    "ld.lld": ["-o", "renuxos-kernel.elf"]
+    "ld.lld": ["-o", "./build_iso/boot/renuxos-kernel.elf"]
   }
 }
