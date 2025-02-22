@@ -27,51 +27,5 @@ Renux OS is a complete Unix-like operating system written in Rust. This project 
 > Renux OS is currently in the development phase. Many features are still being implemented and tested. Contributions and feedback are welcome to help improve and expand the project.
 
 
-## Getting Started
-
-### Prerequisites
-
-To build and run Renux OS, you need to have the following tools installed:
-
-- [Rust](https://www.rust-lang.org/): Install Rust using `rustup`.
-- `cargo bootimage`: Install it using `cargo install bootimage --version "^0.10.0"`.
-- [QEMU](https://www.qemu.org/): Optional, for emulating the OS.
-
-### Build this OS
-
-1. **Clone the Repository**:
-
-    ```sh
-    git https://github.com/Renan2010/renuxos.git
-    cd renuxos
-    ```
-
-2. **Install Rust Nightly and Components**:
-
-    ```sh
-    rustup install nightly
-    rustup component add rust-src --toolchain nightly
-    rustup component add llvm-tools-preview
-    ```
-
-3. **Install `bootimage`**:
-
-    ```sh
-    cargo install bootimage --version "^0.10.0"
-    ```
-
-4. **Build the Bootable Image**
-
-    Easy mode build
-    ```sh
-    python scripts/build.py
-    ```
-    Hard mode build
-    ```sh
-    cargo bootimage --target x86_64-unknown-none -j cores # number of  CPU cores
-    ```
-6. **Run with QEMU** (optional):
-
-    ```sh
-    qemu-system-x86_64 -drive format=raw,file=target/x86_64-unknown-none/debug/bootimage-renuxos.bin
-    ```
+## Build this OS and documentation
+For detailed instructions on how to build the operating system, including the documentation, visit the [docs](./docs/docs.md) directory.
