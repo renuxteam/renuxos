@@ -11,7 +11,6 @@ Make sure you have the necessary tools installed:
 - **grub-mkrescue**: To create the bootable ISO image.
 - **nproc**: To get the number of CPU cores (used to optimize the build process).
 ## Steps
-### Steps
 
 1. **Clone the Repository:**
 
@@ -21,17 +20,23 @@ Make sure you have the necessary tools installed:
    git clone https://github.com/username/renuxos.git
    cd renuxos
    ```
-2. **Build with `cargo build`**
+2. **Build with `build.py` or `cargo build`**
+   
+   Python build.py scripty (more friendly)
+   ```bash
+   python build.py
+   ```
+   Or cargo build (especially for Nerds)
    ```bash
    cargo build --target=config/arch/x86_64-renux.json -j $(nproc)
    ```
    The `-j $(nproc)` option uses all available CPU cores to speed up the build.
 
-3. **Create the Bootable ISO**
+4. **Create the Bootable ISO**
    ```bash
    grub-mkrescue -o build_iso/renux.iso build_iso/
    ```
-4. **Run with Qemu**
+5. **Test with Qemu**
    ```bash
    qemu-system-x86_64 -cdrom renux.iso
    ```
