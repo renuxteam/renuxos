@@ -1,29 +1,28 @@
 [package]
-name = "renuxos"
-version = "0.1.0"
-edition = "2024"
-build = "renux_kernel/src/build.rs"
+name = "renuxos" # Name of the package
+version = "0.1.0" # Version of the package
+edition = "2024" # Rust edition to use
+build = "renux_kernel/src/build.rs" # Custom build script location
 
 [dependencies]
-bootloader = "0.9"
+bootloader = "0.9" # Dependency for the bootloader crate
 
 [dev-dependencies]
-bootimage = "0.10.0"
+bootimage = "0.10.0" # Development dependency for creating bootable disk images
 
 [build-dependencies]
-bootimage = "0.10.0"
-cc = "1.0"
+bootimage = "0.10.0" # Build dependency for creating bootable disk images
+cc = "1.0" # Build dependency for the `cc` crate to compile C code
+
 [build]
-target-dir = "target"
+target-dir = "target" # Directory for build outputs
 
 [profile.dev]
-panic = "abort"
+panic = "abort" # Panic behavior for development profile
 
 [profile.release]
-panic = "abort"
+panic = "abort" # Panic behavior for release profile
 
 [[bin]]
-name = "renuxos"
-path = "renux_kernel/src/main.rs"
-
-
+name = "renuxos" # Name of the binary
+path = "renux_kernel/src/main.rs" # Path to the main source file for the binary
