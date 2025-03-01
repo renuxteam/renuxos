@@ -24,7 +24,7 @@ jobs:
         profile: minimal
 
     - name: Install LLVM and clang
-      run: apt install llvm llvm-dev clang
+      run: sudo apt install llvm llvm-dev clang
     - name: Set nightly as default
       run: rustup default nightly
 
