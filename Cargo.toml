@@ -2,7 +2,7 @@
 name = "renuxos"
 version = "0.1.0"
 edition = "2024"
-build = "kernel/src/build.rs"
+build = "renux_kernel/src/build.rs"
 
 [dependencies]
 bootloader = "0.9"
@@ -24,6 +24,6 @@ panic = "abort"
 
 [[bin]]
 name = "renuxos"
-path = "kernel/src/main.rs"
+path = "renux_kernel/src/main.rs"
 
 
