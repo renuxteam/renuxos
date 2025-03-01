@@ -4,5 +4,5 @@
 
 This folder contains all the documentation for **Renux OS**.
 
-## Build Renux OS
-[Build X86_64](./build-renux/build_x86_64.md)
+## Build guide Renux OS
+[Build X86_64](./build-guide/build_x86_64.md)
