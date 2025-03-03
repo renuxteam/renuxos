@@ -1,16 +1,13 @@
 #ifndef VGA_H
 #define VGA_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+typedef struct
+{
+    unsigned char character;
+    unsigned char color;
+} ScreenChar;
 
-void init_vga_driver();
-
-#ifdef __cplusplus
-}
-#ifdef __cplusplus
+void vga_clear_screen();
+void vga_print(const char* str);
 
 #endif
-#endif
-#endif // VGA_H
