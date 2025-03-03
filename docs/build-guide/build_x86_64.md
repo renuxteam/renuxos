@@ -7,9 +7,10 @@ To compile Renux OS with the specific configuration for the x86_64 architecture 
 Make sure you have the necessary tools installed:
 
 - **Rust**: To compile the kernel code.
-- **GCC**: To compile the C/C++ drivers.
+- **Clang**: To compile the C/C++ drivers.
 - **grub-mkrescue**: To create the bootable ISO image.
 - **nproc**: To get the number of CPU cores (used to optimize the build process).
+- **LLVM development libraries**: To build multiboot 2(or multibootheader)
 ## Steps
 
 1. **Clone the Repository:**
@@ -17,7 +18,7 @@ Make sure you have the necessary tools installed:
    If you haven’t done so already, clone the Renux OS repository:
 
    ```bash
-   git clone https://github.com/username/renuxos.git
+   git clone https://github.com/Renan2010/renuxos.git
    cd renuxos
    ```
 2. **Build with `build.py` or `cargo build`**
@@ -28,7 +29,7 @@ Make sure you have the necessary tools installed:
    ```
    Or cargo build (especially for Nerds)
    ```bash
-   cargo build --target=config/arch/x86_64-renux.json -j $(nproc)
+   cargo build -p renux_kernel --target=config/arch/x86_64-renux.json -j $(nproc)
    ```
    The `-j $(nproc)` option uses all available CPU cores to speed up the build.
 
