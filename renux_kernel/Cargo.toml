@@ -1,0 +1,22 @@
+[package]
+name = "renux_hybrid_kernel"
+version = "0.1.0"
+edition = "2024"
+build = "src/build.rs"
+
+[dev-dependencies]
+bootimage = "0.10.0" # Development dependency for creating bootable disk images
+bootloader = "0.9" # Dependency for the bootloader crate
+
+[build-dependencies]
+bootimage = "0.10.0" # Build dependency for creating bootable disk images
+cc = "1.0" # Build dependency for the `cc` crate to compile C code
+
+[build]
+target-dir = "target" # Directory for build outputs
+
+[profile.dev]
+panic = "abort" # Panic behavior for development profile
+
+[profile.release]
+panic = "abort" # Panic behavior for release profile
