@@ -1,0 +1,11 @@
+[package]
+name = "menuconfig"
+version = "0.0.1"
+edition = "2024"
+[dependencies]
+crossterm = "0.27"
+ratatui = "0.25"
+
+[build-dependencies]
+smallvec = { version = "2.0.0-alpha.10", default-features = false }
+crossterm = "0.27"
