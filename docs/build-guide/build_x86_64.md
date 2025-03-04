@@ -29,7 +29,7 @@ Make sure you have the necessary tools installed:
    ```
    Or cargo build (especially for Nerds)
    ```bash
-   cargo build -p renux_kernel --target=config/arch/x86_64-renux.json -j $(nproc)
+   cargo build -p main --target=config/arch/x86_64-renux.json -j $(nproc)
    ```
    The `-j $(nproc)` option uses all available CPU cores to speed up the build.
 
