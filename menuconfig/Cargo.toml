@@ -1,11 +1,15 @@
 [package]
-name = "menuconfig"
-version = "0.0.1"
-edition = "2024"
+# Specifies basic package metadata
+name = "menuconfig"         # The name of the package/project
+version = "0.0.1"           # The version of this package
+edition = "2024"            # The Rust edition being used (2024 edition)
+
 [dependencies]
-crossterm = "0.27"
-ratatui = "0.25"
+# Specifies runtime dependencies
+crossterm = "0.27"          # A crate for cross-platform terminal handling
+ratatui = "0.25"            # A crate for building terminal-based user interfaces (TUI)
 
 [build-dependencies]
-smallvec = { version = "2.0.0-alpha.10", default-features = false }
-crossterm = "0.27"
+# Specifies dependencies required during the build process
+smallvec = { version = "2.0.0-alpha.10", default-features = false } # A crate for small, space-efficient vectors
+crossterm = "0.27"          # Reusing Crossterm during the build process for terminal-related tasks

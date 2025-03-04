@@ -1,3 +1,12 @@
 [workspace]
-members = ["renux_kernel", "menuconfig"] # Renux kernel and menuconfig
-resolver = "3"
+# Defines the workspace configuration
+members = ["renux_kernel", "menuconfig", "main"] # Specifies the workspace members (renux_kernel, menuconfig, main)
+resolver = "3"                                  # Uses the Cargo dependency resolver version 3
+
+[profile.dev]
+# Configuration for the development profile
+panic = "abort"                                 # Configures panic behavior to "abort" during development builds
+
+[profile.release]
+# Configuration for the release profile
+panic = "abort"                                 # Configures panic behavior to "abort" during release builds

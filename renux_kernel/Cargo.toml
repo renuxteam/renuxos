@@ -1,22 +1,16 @@
 [package]
-name = "renux_kernel"
-version = "0.1.0"
-edition = "2024"
-build = "src/build.rs"
+# Basic package information
+name = "renux_kernel"       # The name of the kernel package/project
+version = "0.1.0"           # The current version of the project
+edition = "2024"            # The Rust edition being used (2024 edition)
+build = "src/build.rs"      # Specifies a custom build script located at "src/build.rs"
 
 [dev-dependencies]
-bootimage = "0.10.0" # Development dependency for creating bootable disk images
-bootloader = "0.9" # Dependency for the bootloader crate
+# Development-only dependencies
+bootimage = "0.10.0"        # Used for creating bootable disk images during development
+bootloader = "0.9"          # Provides the bootloader crate, used to bootstrap the kernel
 
 [build-dependencies]
-bootimage = "0.10.0" # Build dependency for creating bootable disk images
-cc = "1.0" # Build dependency for the `cc` crate to compile C code
-
-[build]
-target-dir = "target" # Directory for build outputs
-
-[profile.dev]
-panic = "abort" # Panic behavior for development profile
-
-[profile.release]
-panic = "abort" # Panic behavior for release profile
+# Build script dependencies
+bootimage = "0.10.0"        # Required to generate bootable disk images during the build process
+cc = "1.0"                  # Enables building and linking C code during the build process
