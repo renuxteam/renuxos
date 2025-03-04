@@ -22,8 +22,19 @@ jobs:
         with:
           toolchain: nightly
           components: rustfmt
+
       - name: Set nightly as default
         run: rustup default nightly
 
       - name: Format code
         run: cargo fmt
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m 'Format code with rustfmt'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.WORK_BOT }}
