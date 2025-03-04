@@ -1,32 +1,32 @@
-name: Format Code # The name of the workflow displayed in the GitHub Actions UI
+name: Format Code
 
 on:
-  # Triggers for the workflow
-  push: # Run the workflow on every push to the specified branches
+  push: 
     branches:
-      - main # Only run the workflow when changes are pushed to the "main" branch
-  pull_request: # Run the workflow on pull requests targeting the specified branches
+      - main
+  pull_request: 
     branches:
-      - main # Only trigger for pull requests targeting the "main" branch
+      - main
 
 jobs:
-  rustfmt: # The ID for this job
-    name: Run rustfmt # A display name for the job
-    runs-on: ubuntu-latest # The virtual machine environment for the job (Ubuntu)
+  rustfmt:
+    name: Run rustfmt
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository # Step to pull the repository code into the virtual environment
-        uses: actions/checkout@v3 # Uses the GitHub-provided action for checking out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Install Rust # Step to install Rust and the rustfmt tool
-        uses: actions-rs/toolchain@v1 # Uses the Rust toolchain action
-        with: # Specify the Rust toolchain and components to install
-          toolchain: stable # Use the stable version of Rust
-          components: rustfmt # Include the rustfmt component for formatting the code
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          components: rustfmt
+      - name: Set nightly as default
+        run: rustup default nightly
 
-      - name: Check code format # Step to check if the code is properly formatted
-        run: cargo fmt -- --check # Run rustfmt in "check mode", which verifies formatting without applying changes
+      - name: Check code format
+        run: cargo fmt -- --check
 
-      # Uncomment the following step if you want the workflow to automatically format the code
-      - name: Format code # Step to format the code
-        run: cargo fmt # Run rustfmt to fix formatting issues
+      - name: Format code
+        run: cargo fmt
