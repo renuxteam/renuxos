@@ -1,0 +1,5 @@
+brace_style = "AlwaysNextLine" # Chaves em linhas separadas (estilo GNU)
+hard_tabs = false              # Espaços em vez de tabulação
+tab_spaces = 2                 # Dois espaços por nível de indentação
+use_small_heuristics = "Off"   # Desabilita compactação de código para estilo mais aberto
+newline_style = "Unix"         # Certifica-se de usar novas linhas no estilo Unix
