@@ -7,7 +7,11 @@ use std::process::Command;
 // Main function
 fn main() -> std::io::Result<()>
 {
+  println!("Running build.rs (Renux_kernel)");
+  println!("Building drivers");
+  println!("Starting build_multiboot function");
   build_multiboot()?;
+  println!("Compiling drivers");
   build_drivers()?;
   Ok(())
 }
