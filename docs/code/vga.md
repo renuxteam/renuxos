@@ -1,4 +1,4 @@
-# C Drivers Documentation
+# VGA Driver Documentation
 
 ## File: `drivers/c/gpu/vga/vga.c`
 
