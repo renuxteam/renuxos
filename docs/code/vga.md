@@ -2,6 +2,9 @@
 
 ## File: `drivers/c/gpu/vga/vga.c`
 
+> [!NOTE]
+> This GPU directory is directed to onboard video cards such as Intel Iris Xe graphics, Radeon APUs and also off boards such as Intel AMD and Nvdia
+
 ### Header File: `drivers/c/gpu/include/vga.h`
 ```c
 #ifndef VGA_H
