@@ -1,6 +1,6 @@
 [workspace]
 # Defines the workspace configuration
-members = ["renux_kernel", "menuconfig"] # Specifies the workspace members (renux_kernel, menuconfig) main is future implementation
+members = ["kernel", "menuconfig", "main"] # Specifies the workspace members (renux_kernel, menuconfig) main is future implementation
 resolver = "3"                                  # Uses the Cargo dependency resolver version 3
 
 [profile.dev]
