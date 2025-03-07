@@ -1,6 +1,6 @@
 [package]
 # Basic package information
-name = "renux_kernel"       # The name of the kernel package/project
+name = "kernel"       # The name of the kernel package/project
 version = "0.1.0"           # The current version of the project
 edition = "2024"            # The Rust edition being used (2024 edition)
 build = "src/build.rs"      # Specifies a custom build script located at "src/build.rs"
