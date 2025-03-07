@@ -1,15 +1,7 @@
-## 🌍 Selecionar Idioma | Seleccionar Idioma
 
-| 🌐 Language | 📄 README |
-|------------|----------|
-| Portugues | [README_BR.md](./docs/readme_in_other_languages/README_BR.md) |
-| Español | [README_es.md](./docs/readme_in_other_languages/README_ES.md) |
-#
 <p align="center">
   <img src="https://github.com/user-attachments/assets/99a8117c-bd7e-4633-b6bb-3f6ce2c29bcb" alt="Renux Logo">
 </p>
-
-#
 
 Renux OS is a complete Unix-like operating system written in Rust. This project aims to provide a hybrid kernel that can be extended with additional features as needed. The main focus is to learn and explore developing an operating system in Rust.
 
@@ -29,3 +21,7 @@ Renux OS is a complete Unix-like operating system written in Rust. This project 
 
 ## Build this OS and documentation
 For detailed instructions on how to build the operating system, including the documentation, visit the [docs](./docs/docs.md) directory.
+
+## Readme in othes languages
+- Portugues | [README_BR.md](./docs/translations/README_BR.md) |
+- Español | [README_es.md](./docs/translations/README_ES.md) |
