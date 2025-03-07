@@ -1,4 +1,4 @@
-name: Build Renux OS
+name: Build Renux OS (X86_64)
 
 on:
   push:
@@ -31,5 +31,7 @@ jobs:
     - name: Add target
       run: rustup target add x86_64-unknown-none
 
+    - name: Install bootimage in cargo
+      run: cargo install bootimage
     - name: Build
-      run: cargo build -p main --target=config/arch/x86_64-renux.json -j $(nproc) -vv
+      run: cargo bootimage -p main --target=config/arch/x86_64-renux.json -j $(nproc) -vv
