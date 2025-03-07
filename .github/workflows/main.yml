@@ -33,5 +33,7 @@ jobs:
 
     - name: Install bootimage in cargo
       run: cargo install bootimage
+    - name: Install LLVM Tools preview(cargo)
+      run: rustup component add llvm-tools-preview
     - name: Build
       run: cargo bootimage -p main --target=config/arch/x86_64-renux.json -j $(nproc) -vv
