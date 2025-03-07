@@ -9,30 +9,9 @@ fn main() -> std::io::Result<()>
 {
   println!("Running build.rs (Renux_kernel)");
   println!("Building drivers");
-  println!("Starting build_multiboot function");
-  build_multiboot()?;
   println!("Compiling drivers");
   build_drivers()?;
-  Ok(())
-}
-// Build Multiboot Header (or Multiboot 2)
-fn build_multiboot() -> std::io::Result<()>
-{
-  // Build command
-  let mut build = Command::new("llc");
-  // LLVM IR (Or ASM) path
-  let multiboot2 = "../build_iso/boot/header/multiboot_header.ll";
-
-  let status = build.arg(multiboot2).status()?;
-
-  // Error mensage
-  let error = "Failed to generate multiboot header.";
-
-  if !status.success() {
-    eprintln!("{}", error);
-    return Err(std::io::Error::new(std::io::ErrorKind::Other, "llc command failed"));
-  }
-
+  println!("cargo:rustc-link-arg=-T./linker.ld");
   Ok(())
 }
 // Collect C/C++ files
