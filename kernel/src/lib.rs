@@ -2,8 +2,8 @@
 #![no_main] // disable all Rust-level entry points
 
 // Load Multiboot
-mod multiboot;
 mod init_system;
+mod multiboot;
 
 use core::panic::PanicInfo;
 
