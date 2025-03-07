@@ -32,4 +32,4 @@ jobs:
       run: rustup target add x86_64-unknown-none
 
     - name: Build
-      run: cargo build -p renux_kernel --target=config/arch/x86_64-renux.json -j $(nproc) -vv
+      run: cargo build -p kernel --target=config/arch/x86_64-renux.json -j $(nproc) -vv
