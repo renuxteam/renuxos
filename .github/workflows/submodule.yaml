@@ -1,0 +1,23 @@
+name: Add Kernel Submodule
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  add-submodule:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository content
+      uses: actions/checkout@v2
+
+    - name: Add kernel submodule
+      run: |
+        git submodule add https://github.com/Renux-Team/kernel.git kernel
+        git submodule update --init --recursive
+        git config -f .gitmodules submodule.kernel.branch main
+        git add .gitmodules kernel
+        git commit -m "Add kernel submodule"
+        git push origin main
