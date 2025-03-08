@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout repository content
       uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.WORK_BOT }}
 
     - name: Update kernel submodule
       run: |
@@ -19,6 +21,8 @@ jobs:
         git add kernel
         git commit -m "Update kernel submodule"
         git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.WORK_BOT }}
 
     - name: Commit and push changes
       run: |
