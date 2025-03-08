@@ -6,7 +6,8 @@ resolver = "3"                                  # Uses the Cargo dependency reso
 [profile.dev]
 # Configuration for the development profile
 panic = "abort"                                 # Configures panic behavior to "abort" during development builds
-
+opt-level = 0
 [profile.release]
 # Configuration for the release profile
 panic = "abort"                                 # Configures panic behavior to "abort" during release builds
+opt-level = 3

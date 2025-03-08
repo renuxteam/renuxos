@@ -12,8 +12,3 @@ bootloader = "0.9"
 # Build script dependencies
 bootimage = "0.10.0"        # Required to generate bootable disk images during the build process
 cc = "1.0"                  # Enables building and linking C code during the build process
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-panic = "abort"

@@ -15,8 +15,3 @@ bootloader = "0.9"          # Provides the bootloader crate, used to bootstrap t
 bootimage = "0.10.0"        # Required to generate bootable disk images during the build process
 cc = "1.0"                  # Enables building and linking C code during the build process
 
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-panic = "abort"
