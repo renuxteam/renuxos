@@ -10,27 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository content
-      uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.WORK_BOT }}
-        submodules: true  # Ensure submodules are checked out
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Configure Git
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-    - name: Update kernel submodule
-      run: |
-        git submodule update --remote --merge
-        git add kernel
-        git commit -m "Update kernel submodule"
-      env:
-        GITHUB_TOKEN: ${{ secrets.WORK_BOT }}
-
-    - name: Push changes
-      run: |
-        git push origin main
-      env:
-        GITHUB_TOKEN: ${{ secrets.WORK_BOT }}
+      - name: Update kernel submodule
+        run: |
+          git submodule update --remote --merge --allow-unrelated-histories
+          git add kernel
+          git commit -m "Update kernel submodule"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
