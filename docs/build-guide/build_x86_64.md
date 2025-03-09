@@ -11,6 +11,7 @@ Make sure you have the necessary tools installed:
 - **grub-mkrescue**: To create the bootable ISO image.
 - **nproc**: To get the number of CPU cores (used to optimize the build process).
 - **LLVM development libraries**: To build multiboot 2(or multibootheader)
+  
 ## Steps
 
 1. **Clone the Repository:**
@@ -18,26 +19,27 @@ Make sure you have the necessary tools installed:
    If you haven’t done so already, clone the Renux OS repository:
 
    ```bash
-   git clone https://github.com/Renan2010/renuxos.git
+   git clone --recurse-submodules https://github.com/Renan2010/renuxos.git
    cd renuxos
    ```
-2. **Build with `build.py` or `cargo build`**
+2. **Build Renux OS:**
+   To compile do
+   ```bash
+   make build_renux 
+   ```
+> [!TIP]
+> To further speed up compilation I strongly recommend you add two more threads to compile Renux OS
+> 
+> `Example -> CPU 4C/4T`
+> ```bash
+> make build_renux JOBS=6
+> ```
+3. **Run with QEMU:**
+   Test Renux OS in an VM
+   ```bash
+   make run
+   ```
    
-   Python build.py scripty (more friendly)
-   ```bash
-   python build.py
-   ```
-   Or cargo build (especially for Nerds)
-   ```bash
-   cargo build -p main --target=config/arch/x86_64-renux.json -j $(nproc)
-   ```
-   The `-j $(nproc)` option uses all available CPU cores to speed up the build.
+  
+   
 
-4. **Create the Bootable ISO**
-   ```bash
-   grub-mkrescue -o build_iso/renux.iso build_iso/
-   ```
-5. **Test with Qemu**
-   ```bash
-   qemu-system-x86_64 -cdrom renux.iso
-   ```
