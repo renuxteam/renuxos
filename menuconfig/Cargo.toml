@@ -1,0 +1,7 @@
+[package]
+name = "menuconfig"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cursive = { git = "https://github.com/gyscos/cursive"}
