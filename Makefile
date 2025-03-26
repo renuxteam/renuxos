@@ -11,7 +11,8 @@ all: init_submodules build_renux
 # Build the project using cargo rustc with the specified target and number of jobs
 build_renux:
 	@echo "==> Starting build process"
-	@if cargo bootimage -p $(BUILD_WORKSPACE) --target=$(TARGET) -j $(JOBS) -vv; then \
+	@if RUSTC_WRAPPER=sccache RUSTFLAGS="-C opt-level=z -C codegen-units=16 -C prefer-dynamic -C inline-threshold=1000" \
+		cargo +nightly bootimage -p main --target=$(TARGET) -j $(JOBS) -vv ; then \
 		echo "==> Build process completed to run with 'make run'"; \
 	else \
 		echo "==> Build process failed"; \
@@ -22,7 +23,8 @@ init_submodules:
 	@git submodule update --init --recursive
 # Run the menuconfig utility to configure the kernel
 menuconfig:
-	@cargo +stable run -p menuconfig -j $(JOBS) -vv 
+	@ RUSTC_WRAPPER=sccache cargo +stable run -p menuconfig -j $(JOBS) -vv -- -C link-arg=-fuse-ld=mold -C linker=clang -C codegen-units=16 -C opt-level=z -C target-cpu=native 
+
 # Run the Renux OS in QEMU
 run: 
 	@qemu-system-x86_64 -drive format=raw,file=target/$(ARCH)/debug/bootimage-main.bin	
