@@ -21,8 +21,8 @@ Para ver nuestros planes y el futuro del sistema Renux, haz clic [aquí](docs/pl
 Para obtener instrucciones detalladas sobre cómo construir el sistema operativo, incluida la documentación, visita el directorio [docs](./docs/docs.md).
 
 ## 🌍 **Leer el Readme en Otros Idiomas**
-- 🇧🇷 **Português** | [README_BR.md](./docs/translations/README_BR.md)
-- 🇪🇸 **Español** | [README_es.md](./docs/translations/README_ES.md)
+- 🇧🇷 **Português** | [README_BR.md](./README_BR.md)
+- 🇺🇸 **English** | [README.md](../../README.md)
 
 ---
 
