@@ -19,6 +19,7 @@ Renux OS is in constant evolution, focusing on **security**, **performance**, an
 
 ## 🛠️ **Infrastructure and Tools**
 - **Menuconfig**: Develop a separate configuration system for Renux OS, similar to Linux's `menuconfig`, but independent of the operating system.
+- **Renuxpkg**: RenuxOS's user-friendly package manager
 - **Intelligent update system**: Develop an automated update system for drivers and the kernel, facilitating continuous updates without the need to rebuild the entire system.
 
 ## 🔄 **Language Integration**
@@ -30,6 +31,9 @@ Renux OS is in constant evolution, focusing on **security**, **performance**, an
 ## 🌍 **Expansion and Contributions**
 - **Open-source ecosystem**: Continue the evolution of Renux OS as an open-source project, encouraging contributions from developers and building a strong community.
 - **Partnerships and collaborations**: Explore opportunities to collaborate with other operating system communities and open-source projects to share ideas and improve Renux OS.
+
+## 🗂️ **Decentralized Codebase with Submodules**
+The Renux OS codebase is designed to be **decentralized** through the use of **Git submodules**. This allows for the separation of different components of the operating system into **independent repositories**, while still maintaining a unified build process. By using submodules, the system's architecture can evolve more flexibly, with each module being developed and maintained independently, yet easily integrated into the main codebase.
 
 ## 💡 **Long-Term Goals**
 - **Develop a modular architecture** that allows for fast and secure updates.
