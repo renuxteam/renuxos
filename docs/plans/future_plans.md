@@ -1,4 +1,4 @@
-# **Future Plans for Renux OS**
+# **Future Plans for `Renux OS`**
 
 Renux OS is in constant evolution, focusing on **security**, **performance**, and **modularity**. Below are the future plans for the operating system:
 
