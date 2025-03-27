@@ -17,7 +17,7 @@ Para ver nossos planos e o futuro do sistema Renux, clique [aqui](docs/plans/fut
 > [!WARNING]
 > O Renux OS está atualmente em fase de **desenvolvimento**. Muitos recursos ainda estão sendo implementados e testados. Contribuições e feedback são bem-vindos para ajudar a melhorar e expandir o projeto.
 
-## 📝 **Construir este OS e Documentação**
+## 📝 **Construir este SO e Documentação**
 Para instruções detalhadas sobre como construir o sistema operacional, incluindo a documentação, visite o diretório [docs](./docs/docs.md).
 
 ## 🌍 **Leia o Readme em Outras Línguas**
