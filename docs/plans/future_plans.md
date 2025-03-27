@@ -1,44 +1,40 @@
-# **Future Plans for `Renux OS`**
+# Future Plans for Renux OS 🚀
 
-Renux OS is in constant evolution, focusing on **security**, **performance**, and **modularity**. Below are the future plans for the operating system:
+## Versions and Releases 🛠️
 
-## 🚀 **Future Versions**
-- **`Version 1.0 ("Aurora") <- Current(DEV)`**: Initial release for internal testing and community feedback.
-- **`Version 2.0 ("Jaguar")`**: Public release with more features and enhanced stability.
-- **`Subsequent versions`**: Alternating between **internal testing** and **public releases** to ensure continuous system evolution.
+- **'Aurora' Version**: Release for **internal testing**.
+- **'Jaguar' Version**: The next version will be **public**, available to a wider audience.
+- The plan is to **alternate between internal and public releases** with each new version.
 
-## 🔐 **Security**
-- **Enhance the Kernel in Rust**: Implement additional security layers and memory control with Rust.
-- **Add secure drivers**: Focus on driver security, transitioning from C to Zig for increased safety and efficiency.
-- **Intelligent failure monitoring**: Develop an automated failure detection and recovery system.
+## Kernel Development and Improvements 🖥️
 
-## ⚡ **Performance**
-- **Code and memory optimization**: Continue working on custom allocators to reduce memory fragmentation.
-- **Modern driver in Zig**: Use Zig to create drivers that optimize performance while maintaining memory safety.
-- **Faster and more efficient compilation**: Improve build processes using Cargo and Zig to reduce build time and enhance modularity.
+- **Hybrid Kernel**: Continue to enhance **Renux OS** with a strong hybrid kernel.
+- **Drivers**: Develop drivers in **C** for legacy hardware and explore **Zig** and **C++** for modern drivers.
+- **Driver Quality**: Aim to match the **quality** of NVIDIA drivers, maintaining clean, efficient code.
 
-## 🛠️ **Infrastructure and Tools**
-- **Menuconfig**: Develop a separate configuration system for Renux OS, similar to Linux's `menuconfig`, but independent of the operating system.
-- **Renuxpkg**: RenuxOS's user-friendly package manager
-- **Intelligent update system**: Develop an automated update system for drivers and the kernel, facilitating continuous updates without the need to rebuild the entire system.
+## Build System 🔧
 
-## 🔄 **Language Integration**
-- **Zig, Rust, C, and C++ in the system**: Continue integrating these languages effectively, leveraging the strengths of each:
-  - **Rust** for the Kernel and secure memory management.
-  - **Zig** for modern drivers, cross-compilation, and low-level optimizations.
-  - **C/C++** for legacy hardware drivers and compatibility.
+- Use **Cargo** as the build system to streamline integration and system builds.
+- Organize the code into specific **workspaces** for the kernel, menuconfig, and other modules, as planned:
+  - `main`: For building the entire system.
+  - `renux_kernel`: For kernel development.
+  - `menuconfig`: For the configuration application.
 
-## 🌍 **Expansion and Contributions**
-- **Open-source ecosystem**: Continue the evolution of Renux OS as an open-source project, encouraging contributions from developers and building a strong community.
-- **Partnerships and collaborations**: Explore opportunities to collaborate with other operating system communities and open-source projects to share ideas and improve Renux OS.
+## Independent Menuconfig 🎮
 
-## 🗂️ **Decentralized Codebase with Submodules**
-The Renux OS codebase is designed to be **decentralized** through the use of **Git submodules**. This allows for the separation of different components of the operating system into **independent repositories**, while still maintaining a unified build process. By using submodules, the system's architecture can evolve more flexibly, with each module being developed and maintained independently, yet easily integrated into the main codebase.
+- Create **menuconfig** as a **separate** and **independent** application from Renux OS, but still assisting in system configuration.
 
-## 💡 **Long-Term Goals**
-- **Develop a modular architecture** that allows for fast and secure updates.
-- **Expand compatibility** with various architectures and devices, including embedded systems and low-power devices.
-- **Focus on continuous innovation**, surpassing traditional operating systems with **enhanced security**, **exceptional performance**, and **optimized user experience**.
+## Exploration of New Technologies 🔬
 
-## 🚀 **Conclusion**
-Renux OS is designed to be a **modern, efficient, and secure** operating system. The integration of languages like Rust, Zig, C, and C++ offers incredible flexibility, while the focus on **security** and **performance** ensures that the system will become a **reference for the future of operating systems**.
+- **Zig**: Integrate **Zig** into the project to expand development options.
+- **Clang**: Use **Clang** as the default compiler to ensure fast and optimized builds.
+- **Exploring Higher Dimensions**: Study and explore how **perception of higher dimensions** may become a reality in the future, through biology rather than just technology.
+
+## Community Focus 🌍
+
+- Continue to **alternate between internal and public releases**, gathering **feedback** continuously from the developer and tester community.
+- Improve documentation and support to make it easier for other developers to **contribute** to the project.
+
+## Future Vision 🚀
+
+- Make **Renux OS** a leading operating system for those who seek **complete control**, focusing on security, performance, and freedom in development.
