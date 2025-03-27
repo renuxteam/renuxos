@@ -58,14 +58,10 @@ fn compiler_flags_menu(s: &mut Cursive)
   list.add_child("3. Optimize for Speed (-C opt-level=3)", Checkbox::new());
   list.add_child("4. Enable SCCACHE to increase speed", Checkbox::new());
 
-  s.add_layer(
-    Dialog::around(list)
-      .title("Compiler Flags on rustc")
-      .button("Back", |s| {
-        s.pop_layer();
-        main_menu(s);
-      }),
-  );
+  s.add_layer(Dialog::around(list).title("Compiler Flags on rustc").button("Back", |s| {
+    s.pop_layer();
+    main_menu(s);
+  }));
 }
 
 // Main menu
