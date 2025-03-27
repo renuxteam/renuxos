@@ -8,7 +8,7 @@
 
 Renux OS is a complete Unix-like operating system written in Rust. This project aims to provide a hybrid kernel that can be extended with additional features as needed. The main focus is to learn and explore developing an operating system in Rust.
 
-## Plans
+## Future plans
 To see our plans and the future of the Renux system click [here](docs/plans/future_plans.md)
 ## Development Status
 > [!WARNING]
