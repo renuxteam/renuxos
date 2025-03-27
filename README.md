@@ -22,7 +22,7 @@ For detailed instructions on how to build the operating system, including the do
 
 ## 🌍 **Readme in Other Languages**
 - 🇧🇷 **Português** | [README_BR.md](./docs/translations/README_BR.md)
-- 🇪🇸 **Español** | [README_es.md](./docs/translations/README_ES.md)
+- 🇪🇸 **Español** | [README_ES.md](./docs/translations/README_ES.md)
 
 ---
 
