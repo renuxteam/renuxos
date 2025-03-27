@@ -19,7 +19,6 @@ Renux OS is in constant evolution, focusing on **security**, **performance**, an
 
 ## 🛠️ **Infrastructure and Tools**
 - **Menuconfig**: Develop a separate configuration system for Renux OS, similar to Linux's `menuconfig`, but independent of the operating system.
-- **Zig Bootloader**: Create a more efficient and customized bootloader using Zig to improve boot time and hardware detection.
 - **Intelligent update system**: Develop an automated update system for drivers and the kernel, facilitating continuous updates without the need to rebuild the entire system.
 
 ## 🔄 **Language Integration**
