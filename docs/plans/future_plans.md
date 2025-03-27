@@ -5,7 +5,7 @@ Renux OS is in constant evolution, focusing on **security**, **performance**, an
 ## 🚀 **Future Versions**
 - **`Version 1.0 ("Aurora") <- Current(DEV)`**: Initial release for internal testing and community feedback.
 - **`Version 2.0 ("Jaguar")`**: Public release with more features and enhanced stability.
-- **Subsequent versions**: Alternating between **internal testing** and **public releases** to ensure continuous system evolution.
+- **`Subsequent versions`**: Alternating between **internal testing** and **public releases** to ensure continuous system evolution.
 
 ## 🔐 **Security**
 - **Enhance the Kernel in Rust**: Implement additional security layers and memory control with Rust.
