@@ -1,6 +1,8 @@
 [submodule "kernel"]
 	path = kernel
 	url = https://github.com/Renux-Team/kernel.git
+        branch = main
 [submodule "drivers"]
 	path = drivers
 	url = https://github.com/Renux-Team/drivers.git
+        branch = main
