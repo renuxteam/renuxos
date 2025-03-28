@@ -23,14 +23,14 @@ jobs:
         run: |
           if [ ! -f .gitmodules ]; then
             echo ".gitmodules file is missing, creating it..."
-            cat <<-EOF > .gitmodules
-            [submodule "kernel"]
-              path = kernel
-              url = https://github.com/Renux-Team/kernel.git
-            [submodule "drivers"]
-              path = drivers
-              url = https://github.com/Renux-Team/drivers.git
-            EOF
+            cat <<EOF > .gitmodules
+[submodule "kernel"]
+  path = kernel
+  url = https://github.com/Renux-Team/kernel.git
+[submodule "drivers"]
+  path = drivers
+  url = https://github.com/Renux-Team/drivers.git
+EOF
             git add .gitmodules
             git config --global user.name 'github-actions[bot]'
             git config --global user.email 'github-actions[bot]@users.noreply.github.com'
