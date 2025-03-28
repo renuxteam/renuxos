@@ -1,0 +1,65 @@
+name: Ensure .gitmodules
+
+on:
+  push: 
+    branches:
+      - main
+  pull_request: 
+    branches:
+      - main
+
+jobs:
+  ensure-gitmodules:
+    name: Ensure .gitmodules
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Verify .gitmodules exists
+        run: |
+          if [ ! -f .gitmodules ]; then
+            echo ".gitmodules file is missing, creating it..."
+            cat <<-EOF > .gitmodules
+            [submodule "kernel"]
+              path = kernel
+              url = https://github.com/Renux-Team/kernel.git
+            [submodule "drivers"]
+              path = drivers
+              url = https://github.com/Renux-Team/drivers.git
+            EOF
+            git add .gitmodules
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Add missing .gitmodules file'
+            git push
+          fi
+
+      - name: Verify .gitmodules content
+        run: |
+          EXPECTED_CONTENT=$(cat <<-END
+          [submodule "kernel"]
+            path = kernel
+            url = https://github.com/Renux-Team/kernel.git
+          [submodule "drivers"]
+            path = drivers
+            url = https://github.com/Renux-Team/drivers.git
+          END
+          )
+
+          ACTUAL_CONTENT=$(cat .gitmodules)
+
+          if [ "$EXPECTED_CONTENT" != "$ACTUAL_CONTENT" ]; then
+            echo ".gitmodules file content does not match, updating it..."
+            echo "$EXPECTED_CONTENT" > .gitmodules
+            git add .gitmodules
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Update .gitmodules file to the correct content'
+            git push
+          else
+            echo ".gitmodules file is present and correct."
+          fi
