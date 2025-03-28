@@ -24,14 +24,14 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Update submodules with pull
+      - name: Update submodules on main branch with explicit pull strategy
         run: |
           git submodule foreach --recursive '
-          branch=$(git rev-parse --abbrev-ref HEAD)
-          git pull origin "$branch" --allow-unrelated-histories
+            git checkout main || (echo "Branch main não encontrada nesse submódulo" && exit 0);
+            git pull origin main --allow-unrelated-histories --no-rebase;
           '
-          
-      - name: Commit and Push changes
+
+      - name: Commit and push changes
         run: |
           git add .
           if git diff-index --quiet HEAD --; then
