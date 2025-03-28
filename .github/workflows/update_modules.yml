@@ -19,15 +19,24 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Update submodules
+      - name: Configure Git
         run: |
-          git submodule update --remote --merge --allow-unrelated-histories
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Update submodules with pull
+        run: |
+          git submodule foreach --recursive '
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          git pull origin "$branch" --allow-unrelated-histories
+          '
+          
+      - name: Commit and Push changes
+        run: |
           git add .
           if git diff-index --quiet HEAD --; then
             echo "No changes to commit"
           else
-            git config --global user.name 'github-actions[bot]'
-            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
             git commit -m "Update submodules"
             git push
           fi
