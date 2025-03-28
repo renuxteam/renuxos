@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: recursive # Adiciona submodules: recursive aqui
 
       - name: Verify .gitmodules exists
         run: |
