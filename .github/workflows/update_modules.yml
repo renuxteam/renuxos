@@ -21,7 +21,7 @@ jobs:
 
       - name: Update submodules
         run: |
-          git submodule update --remote --merge
+          git submodule update --remote --merge --allow-unrelated-histories
           git add .
           if git diff-index --quiet HEAD --; then
             echo "No changes to commit"
