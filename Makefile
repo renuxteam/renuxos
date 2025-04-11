@@ -17,7 +17,7 @@ BUILD_WORKSPACE = main
 # ==========================
 # Default Target
 # ==========================
-all: init_submodules build_renux
+all: build_renux
 
 # ==========================
 # Build Targets
@@ -64,8 +64,37 @@ run:
 clean:
 	@echo "==> Cleaning project"
 	@cargo clean -vv
+	@echo "==> Cleaning target directory"
+	@rm -rf target/$(ARCH)
+	@echo "==> Cleaning The ISO"
+	@rm -rf renux.iso
 
+codiname:
+	@echo "==> Renux OS Aurora 0.1.0 (DEV)"
+iso:
+	@cp target/$(ARCH)/debug/bootimage-main.bin ./iso/boot
+	@echo "==> Renux OS ISO copied to iso/boot"
+	@echo "==> Building ISO image"
+	@grub-mkrescue -o renux.iso iso
+run_iso:
+	@echo "==> Running Renux OS ISO in QEMU"
+	@qemu-system-x86_64 -cdrom renux.iso
+help:
+	@echo "Renux OS Makefile"
+	@echo "Usage: make [target]"
+	@echo ""
+	@echo "Targets:"
+	@echo "  all             Build the project (default)"
+	@echo "  init_submodules Initialize git submodules"
+	@echo "  build_renux     Build the Renux OS"
+	@echo "  menuconfig      Run the menuconfig utility"
+	@echo "  run             Run the Renux OS in QEMU"
+	@echo "  clean           Clean the project"
+	@echo "  help            how this help message"
+	@echo "  codiname        Show the codename for current release"
+	@echo "  iso             Build the ISO image"
+	@echo "  run_iso         Run the Renux OS ISO in QEMU"
 # ==========================
 # Phony Targets
 # ==========================
-.PHONY: all init_submodules build_renux clean menuconfig run
+.PHONY: all init_submodules build_renux clean menuconfig run iso
