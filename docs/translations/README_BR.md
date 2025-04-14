@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/99a8117c-bd7e-4633-b6bb-3f6ce2c29bcb" alt="Renux Logo">
 </p>
 <p align="center">
- <img src="https://github.com/user-attachments/assets/00c385c8-7796-4a60-80b9-b40b496358fc" alt="Renux OS">
+ <img src="https://github.com/user-attachments/assets/9e11d6c0-ac41-42bf-ae24-73bd1c37ab6d" alt="Renux OS">
 </p>
 
 # **Renux OS**
@@ -43,7 +43,6 @@ Para instruções detalhadas sobre como construir o sistema operacional, incluin
 
 ## 🛠️ **Infraestrutura e Ferramentas**
 - **Menuconfig**: Desenvolver um sistema de configuração separado para o Renux OS, similar ao `menuconfig` do Linux, mas independente do sistema operacional.
-- **Bootloader em Zig**: Criar um bootloader mais eficiente e personalizado usando Zig para melhorar o tempo de inicialização e a detecção de hardware.
 - **Sistema de atualização inteligente**: Desenvolver um sistema de atualização automatizado para drivers e o kernel, facilitando atualizações contínuas sem a necessidade de reconstruir o sistema inteiro.
 
 ## 🔄 **Integração de Linguagens**
