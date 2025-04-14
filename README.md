@@ -2,8 +2,9 @@
   <img src="https://github.com/user-attachments/assets/99a8117c-bd7e-4633-b6bb-3f6ce2c29bcb" alt="Renux Logo">
 </p>
 <p align="center">
- <img src="https://github.com/user-attachments/assets/00c385c8-7796-4a60-80b9-b40b496358fc" alt="Renux OS">
+ <img src="https://github.com/user-attachments/assets/9e11d6c0-ac41-42bf-ae24-73bd1c37ab6d" alt="Renux OS">
 </p>
+
 
 # **Renux OS**
 
