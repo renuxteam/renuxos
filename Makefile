@@ -27,7 +27,6 @@ all: build_renux
 build_renux:
 	@echo "==> Starting build process"
 	@if RUSTC_WRAPPER=sccache \
-		RUSTFLAGS="-C opt-level=z -C codegen-units=16 -C prefer-dynamic -C inline-threshold=1000" \
 		cargo +nightly bootimage -p $(BUILD_WORKSPACE) --target=$(TARGET) -j $(JOBS) -vv; then \
 		echo "==> Build process completed. Run with 'make run'"; \
 	else \
@@ -44,12 +43,7 @@ init_submodules:
 menuconfig:
 	@echo "==> Running menuconfig"
 	@RUSTC_WRAPPER=sccache \
-		cargo +stable run -p menuconfig -j $(JOBS) -vv -- \
-		-C link-arg=-fuse-ld=mold \
-		-C linker=clang \
-		-C codegen-units=16 \
-		-C opt-level=z \
-		-C target-cpu=native
+		cargo +stable run -p menuconfig -j $(JOBS) -vv
 
 # ==========================
 # Run and Clean Targets
@@ -94,6 +88,7 @@ help:
 	@echo "  codiname        Show the codename for current release"
 	@echo "  iso             Build the ISO image"
 	@echo "  run_iso         Run the Renux OS ISO in QEMU"
+
 # ==========================
 # Phony Targets
 # ==========================
