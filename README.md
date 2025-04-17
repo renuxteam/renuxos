@@ -42,10 +42,6 @@ For detailed instructions on how to build the operating system, including the do
 - **Modern driver in Zig**: Use Zig to create drivers that optimize performance while maintaining memory safety.
 - **Faster and more efficient compilation**: Improve build processes using Cargo and Zig to reduce build time and enhance modularity.
 
-## 🛠️ **Infrastructure and Tools**
-- **Menuconfig**: Develop a separate configuration system for Renux OS, similar to Linux's `menuconfig`, but independent of the operating system.
-- **Intelligent update system**: Develop an automated update system for drivers and the kernel, facilitating continuous updates without the need to rebuild the entire system.
-
 ## 🔄 **Language Integration**
 - **Zig, Rust, C, and C++ in the system**: Continue integrating these languages effectively, leveraging the strengths of each:
   - **Rust** for the Kernel and secure memory management.
