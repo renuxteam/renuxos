@@ -5,27 +5,14 @@
  <img src="https://github.com/user-attachments/assets/9e11d6c0-ac41-42bf-ae24-73bd1c37ab6d" alt="Renux OS">
 </p>
 
-
-# **Renux OS**
-
 Renux OS is a complete **Unix-like operating system** written in **Rust**. This project aims to provide a **hybrid kernel** that can be extended with additional features as needed. The main focus is to learn and explore developing an operating system in **Rust**.
-
-## 🚀 **Future Plans**
-
-To see our plans and the future of the Renux system, click [here](docs/plans/future_plans.md).
 
 ## 🛠️ **Development Status**
 > [!WARNING]
 > Renux OS is currently in the **development phase**. Many features are still being implemented and tested. Contributions and feedback are welcome to help improve and expand the project.
 
-## 📝 **Build this OS and Documentation**
-For detailed instructions on how to build the operating system, including the documentation, visit the [docs](./docs/docs.md) directory.
-
-## 🌍 **Readme in Other Languages**
-- 🇧🇷 **Português** | [README_BR.md](./docs/translations/README_BR.md)
-- 🇪🇸 **Español** | [README_ES.md](./docs/translations/README_ES.md)
-
----
+## 📝 **Build this OS and Wiki**
+For detailed instructions on how to build the operating system, including the documentation, visit the [wiki](https://github.com/renuxteam/renuxos-src/wiki).
 
 ## 🚀 **Future Versions**
 - **Version 1.0 ("Aurora")**: Initial release for internal testing and community feedback.
