@@ -12,7 +12,7 @@ TARGET = config/arch/$(ARCH).json
 JOBS ?= $(shell nproc)
 
 # Workspace to build
-BUILD_WORKSPACE = main
+KERNEL_WORKSPACE = kernel
 
 # ==========================
 # Default Target
@@ -24,11 +24,11 @@ all: build_renux
 # ==========================
 
 # Build the project using cargo rustc with the specified target and number of jobs
-build_renux:
+build_kernel:
 	@echo "==> Starting build process"
 	@if RUSTC_WRAPPER=sccache \
-		cargo +nightly bootimage -p $(BUILD_WORKSPACE) --target=$(TARGET) -j $(JOBS) -vv; then \
-		echo "==> Build process completed. Run with 'make run'"; \
+		cargo +nightly build -p $(KERNEL_WORKSPACE) --target=$(TARGET) -j $(JOBS) -vv; then \
+		echo "==> Build hybrid kernel success"; \
 	else \
 		echo "==> Build process failed"; \
 		exit 1; \
@@ -78,9 +78,9 @@ help:
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "Targets:"
-	@echo "  all             Build the project (default)"
+	@echo "  all             Build the Kernel (default target)"
 	@echo "  init_submodules Initialize git submodules"
-	@echo "  build_renux     Build the Renux OS"
+	@echo "  build_kernel    Build the Kernel"
 	@echo "  menuconfig      Run the menuconfig utility"
 	@echo "  run             Run the Renux OS in QEMU"
 	@echo "  clean           Clean the project"

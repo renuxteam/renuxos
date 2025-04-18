@@ -1,13 +1,4 @@
 [workspace]
-# Defines the workspace configuration
-members = ["kernel","main"] # Specifies the members of the workspace, which are "kernel" and "main"
-resolver = "3"                                  # Uses the Cargo dependency resolver version 3
+members = ["bootloader","kernel"] 
+resolver = "3"                                  
 
-[profile.dev]
-# Configuration for the development profile
-panic = "abort"                                 # Configures panic behavior to "abort" during development builds
-opt-level = 0
-[profile.release]
-# Configuration for the release profile
-panic = "abort"                                 # Configures panic behavior to "abort" during release builds
-opt-level = 3
