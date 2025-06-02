@@ -49,3 +49,15 @@ The Renux OS codebase is designed to be **decentralized** through the use of **G
 
 ## 🚀 **Conclusion**
 Renux OS is designed to be a **modern, efficient, and secure** operating system. The integration of languages like Rust, Zig, C, and C++ offers incredible flexibility, while the focus on **security** and **performance** ensures that the system will become a **reference for the future of operating systems**.
+---
+
+## 👨‍💻 Creator
+
+**Renan Lucas** – a AuDHD Ethical hacker, engineer, creator of RenuxOS 
+
+---
+
+## 🧷 License
+
+MIT License. Use it freely, just give credit 😉
+
